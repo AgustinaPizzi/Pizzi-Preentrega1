@@ -1,3 +1,5 @@
+import CartWidget from "../CartWidget/CartWidget";
+
 function NavBar() {
   return (
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -45,6 +47,7 @@ function NavBar() {
             </li>
           </ul>
         </div>
+        <CartWidget />
       </div>
     </nav>
   );

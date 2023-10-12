@@ -105,6 +105,10 @@ button:focus-visible {
   font-weight: 500;
   color: darkred;
 }
+.carrito {
+  width: 50px;
+  
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
