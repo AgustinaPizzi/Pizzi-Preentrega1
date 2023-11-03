@@ -2,7 +2,7 @@ import { BsFillCartPlusFill } from "react-icons/bs";
 
 const CartWidget = () => {
   return (
-    <div className="carrito">
+    <div>
       4 <BsFillCartPlusFill />
     </div>
   );

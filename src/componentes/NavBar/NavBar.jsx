@@ -1,55 +1,41 @@
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import CartWidget from "../CartWidget/CartWidget";
+import { Link,NavLink } from "react-router-dom/cjs/react-router-dom.min";
 
 function NavBar() {
   return (
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <a href="">
-        <img
-          src="../media/img/logo.png"
-          alt="Icono Ec"
-          width="100px"
-          height="100px"
-        />
-      </a>
-      <div class="container-fluid">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li class="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
-              </a>
-            </li>
-            <li class="nav-item">
-              <a className="nav-link" href="#">
-                Envio Express
-              </a>
-            </li>
-            <li class="nav-item">
-              <a className="nav-link" href="#">
-                Costos Despacho
-              </a>
-            </li>
-            <li class="nav-item">
-              <a className="nav-link" href="#">
-                ¿Querés vender tus libros?
-              </a>
-            </li>
-          </ul>
-        </div>
-        <CartWidget />
-      </div>
-    </nav>
+    <Navbar expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="">
+          <img src="../media/img/logo.png" width={100} height={100}></img>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Link to="/" className="btn-home">
+              Home
+            </Link>
+
+            <Nav.Link href="">Envios</Nav.Link>
+            <NavDropdown title="Categorias" id="basic-nav-dropdown">
+            <NavLink className={({isActive})=> isActive ? 'btn btn-outline-primary' : 'btn'} to="/">Bienestar</NavLink>
+            <NavLink className={({isActive})=> isActive ? 'btn btn-outline-primary' : 'btn'} to="/">Fantasia</NavLink>
+            <NavLink className={({isActive})=> isActive ? 'btn btn-outline-primary' : 'btn'} to="/">Grandes clásicos</NavLink>
+            <NavDropdown.Divider />
+            <NavLink className={({isActive})=> isActive ? 'btn btn-outline-primary' : 'btn'} to="/">Dudas</NavLink>
+            </NavDropdown>
+          </Nav>
+          <Nav>
+            <Link to="/cart">
+              <CartWidget />
+            </Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 

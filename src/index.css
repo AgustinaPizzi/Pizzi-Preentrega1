@@ -71,6 +71,23 @@ button:focus-visible {
 }
 .card {
   border-color: #1a1a1a;
+  margin: 10px;
+  height: 800px;
+  margin-top: 50px;
+}
+.w-25 {
+  width: 250px;
+}
+.card-body {
+  width: 166px;
+  text-align: center;
+}
+.img-card {
+  height: 225px;
+  width: 150px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
 }
 .new {
   margin: 25px;
@@ -81,25 +98,22 @@ button:focus-visible {
   margin-right: 10px;
   font-weight: 600;
 }
-
+.contador {
+  font-size: 30px;
+  padding-top: 25px;
+  font-weight: bold;
+}
 .navbar-tit {
   font-size: 25px;
   font-weight: bold;
   color: #1a1a1a;
   margin: 10px;
+  z-index: 0;
 }
 .card-title {
   color: rgb(62, 0, 0);
 }
-.p1 {
-  font-weight: 600;
-}
-.btncomprar {
-  background-color: #141972;
-}
-.card-text {
-  font-size: 20px;
-}
+
 .precio {
   font-size: 35px;
   font-weight: 500;
@@ -107,8 +121,43 @@ button:focus-visible {
 }
 .carrito {
   width: 50px;
-  
 }
+.card-body {
+  font-size: 20px;
+  text-align: center;
+}
+.nombre,
+.autor,
+.precio,
+.cat {
+  font-size: 20px;
+  text-align: center;
+  margin-left: 20px;
+}
+.btn-carro {
+  border-radius: 2px;
+  background-color: rgb(91, 189, 238);
+  margin: 3px;
+}
+.btn-buscar {
+  text-align: center;
+  position: absolute;
+  top: 50px;
+  padding-left: 800px;
+  border: #141972;
+}
+.btn-form {
+  background-color: #0a99eb;
+}
+
+.btn-home {
+  color: rgb(106, 2, 135);
+  font-weight: bold;
+  font-size: 25px;
+  padding: 4px;
+  margin-right: 9px;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
